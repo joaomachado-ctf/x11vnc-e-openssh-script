@@ -1,10 +1,10 @@
-# Sobre
+### Sobre
 
-Esse script tem como função automatizar o processo de instalação e configuração do x11vnc.
+Esse script tem como função automatizar o processo de instalação e configuração do x11vnc e do openssh server
 
-# Importante
+### Importante
 
-Caso queira mudar a senha na linha 4 faça a alteração nessa parte ... sudo x11vnc -storepasswd sua-senha-aqui /root/.vncpasswd ...
+Caso queira mudar a senha na linha 5 faça a alteração nessa parte ... sudo x11vnc -storepasswd sua-senha-aqui /root/.vncpasswd ...
 
-# Modo de uso
+### Modo de uso
 Dê permissão para execução e rode o script como root
