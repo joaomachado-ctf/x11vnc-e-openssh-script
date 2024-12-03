@@ -1,7 +1,8 @@
 if [ "$(id -u)" != "0" ]; then
     echo "Voce deve executar este script como root! "
 else
-    sudo apt install x11vnc -y && sudo x11vnc -storepasswd 01591046 /root/.vncpasswd && sudo ufw allow 5900 && sudo ufw reload
+    #X11vnc e SSH
+    sudo apt install x11vnc -y && sudo apt install openssh-server -y && sudo x11vnc -storepasswd 01591046 /root/.vncpasswd && sudo ufw allow 5900 && sudo systemctl start ssh && sudo ufw allow ssh && sudo ufw enable && sudo ufw reload
 ​    # 2 Criar o arquivo de execução do x11vnc, inserir o comando de inicialização e dar permissões de execução
     sudo touch /bin/start_x11vnc.sh
     echo x11vnc -find -env FD_XDM=1 -auth guess -forever -rfbauth /root/.vncpasswd >> /bin/start_x11vnc.sh
